@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { ActionSheetController } from '@ionic/angular';
+import { Storage } from '@ionic/storage';
 
 //npm install @ionic-native/camera
 //ionic cordova plugin add cordova-plugin-camera
@@ -41,7 +42,7 @@ export class PhotoService {
       });
 
       // Save all photos for later viewing
-      this.storage.set('photos', this.photos);
+      //this.storage.set('photos', this.photos);
     }, (err) => {
       // Handle error
       console.log("Camera issue: " + err);
@@ -79,7 +80,7 @@ export class PhotoService {
 
   loadSaved() {
     this.storage.get('photos').then((photos) => {
-      this.photos = photos || [];
+      //this.photos = photos || [];
     });
   }
 

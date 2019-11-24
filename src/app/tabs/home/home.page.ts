@@ -14,6 +14,12 @@ export class HomePage implements OnInit {
     caption: "Abrir",
     path: "comunicar",
     content:"Serviço para comunicar ao orgão responsável o estado atual das vias, enviar fotos e cobrar ações."
+  },{
+    icon : "list",
+    label: "Meus comunicados",
+    caption: "Abrir",
+    path: "lista-comunicados",
+    content:"Listar todos os registros de comunicação enviados ao aplicativo pelo usuário."
   }];
 
   constructor(private navCtrl : NavController) { }

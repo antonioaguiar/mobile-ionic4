@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'tabs/home',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'comunicar',
     loadChildren: () => import('./servicos/comunicar/comunicar.module').then( m => m.ComunicarPageModule)
+  },
+  {
+    path: 'lista-comunicados',
+    loadChildren: () => import('./servicos/lista-comunicados/lista-comunicados.module').then( m => m.ListaComunicadosPageModule)
   }
 ];
 

@@ -13,7 +13,7 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: '/tabs/home',
       icon: 'home'
     },
     {
@@ -22,8 +22,8 @@ export class AppComponent {
       icon: 'list'
     },
     {
-      title: 'Tabs',
-      url: '/tabs',
+      title: 'Home2',
+      url: '/home',
       icon: 'list'
     },
     {
