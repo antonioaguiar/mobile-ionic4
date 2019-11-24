@@ -20,7 +20,17 @@ export class AppComponent {
       title: 'List',
       url: '/list',
       icon: 'list'
-    }
+    },
+    {
+      title: 'Tabs',
+      url: '/tabs',
+      icon: 'list'
+    },
+    {
+      title: 'Acessar',
+      url: '/login',
+      icon: 'contact'
+    }   
   ];
 
   constructor(

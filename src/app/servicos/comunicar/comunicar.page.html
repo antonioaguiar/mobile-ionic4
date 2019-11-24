@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Comunicar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-list lines="full" class="ion-no-margin ion-no-padding">
+
+    <form [formGroup]="formComunicar">
+
+      <ion-item>
+        <ion-label position="stacked">Assunto</ion-label>
+        <ion-select value="brown" okText="Okay" cancelText="Dismiss" formControlName="assunto">
+          <ion-select-option value="brown">Brown</ion-select-option>
+          <ion-select-option value="blonde">Blonde</ion-select-option>
+          <ion-select-option value="black">Black</ion-select-option>
+          <ion-select-option value="red">Red</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Email<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Telefone <ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="tel" formControlName="telefone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Mensagem</ion-label>
+        <ion-textarea formControlName="mensagem"></ion-textarea>
+      </ion-item>
+
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin" (click)="submitFormComunicar()">Enviar
+        </ion-button>
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" *ngFor="let photo of photoService.photos">
+            <img [src]="photo.data" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-fab vertical="bottom" horizontal="center">
+        <ion-fab-button (click)="photoService.presentActionSheet()">
+          <ion-icon name="images"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+    </form>
+
+
+  </ion-list>
+
+</ion-content>

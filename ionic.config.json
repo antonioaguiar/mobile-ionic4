@@ -1,5 +1,7 @@
 {
   "name": "AbacoMobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
