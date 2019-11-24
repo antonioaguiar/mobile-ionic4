@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'lista-comunicados',
     loadChildren: () => import('./servicos/lista-comunicados/lista-comunicados.module').then( m => m.ListaComunicadosPageModule)
+  },
+  {
+    path: 'resposta',
+    loadChildren: () => import('./servicos/resposta/resposta.module').then( m => m.RespostaPageModule)
   }
 ];
 

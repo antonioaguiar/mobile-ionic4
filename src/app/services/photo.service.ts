@@ -3,15 +3,13 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 import { ActionSheetController } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+import { Photo } from '../models/photo';
 
 //npm install @ionic-native/camera
 //ionic cordova plugin add cordova-plugin-camera
 //ionic cordova plugin add cordova-sqlite-storage
 //npm install --save @ionic/storage
 
-class Photo {
-  data: any;
-}
 
 @Injectable({
   providedIn: 'root'
