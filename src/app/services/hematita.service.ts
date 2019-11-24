@@ -10,7 +10,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class HematitaService {
 
-  base_path = "http://192.168.1.104:3000/faleconosco";
+  base_path = "http://192.168.1.100:3000/faleconosco";
 
 
   constructor(private http: HttpClient) { }
